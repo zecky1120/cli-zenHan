@@ -2,7 +2,7 @@
 
 import minimist from "minimist";
 import ora from "ora";
-import File from "./file.js";
+import File from "../src/file.js";
 
 const argvs = minimist(process.argv.slice(2));
 

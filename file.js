@@ -1,1 +1,5 @@
-export default class File {}
+export default class File {
+  constructor(file) {
+    this.file = file;
+  }
+}

@@ -6,9 +6,11 @@
     "zenHan": "./bin/zenHan.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "fix": "prettier --write . && eslint --fix .",
+    "lint": "prettier --check . && eslint ."
   },
   "author": "",
+  "type": "module",
   "license": "ISC",
   "description": "",
   "dependencies": {

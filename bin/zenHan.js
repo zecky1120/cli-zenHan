@@ -24,9 +24,7 @@ class ZenHan {
       loading.succeed("解析が成功しました。");
     } catch (error) {
       if (error.code === "ENOENT") {
-        console.error("\n対象のファイル及びディレクトリが存在しませんでした。");
-      } else {
-        console.error("\n" + error.message);
+        console.error("対象のファイル及びディレクトリが存在しませんでした。");
       }
       loading.fail("解析中にエラーが発生しました。");
     }

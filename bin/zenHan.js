@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 import minimist from "minimist";
-import ora from "ora";
+import spinner from "../src/spinner.js";
 import File from "../src/file.js";
 
 const argvs = minimist(process.argv.slice(2));
+const loading = spinner();
 
 class ZenHan {
   constructor(argvs) {
@@ -12,7 +13,6 @@ class ZenHan {
   }
 
   async run() {
-    const loading = this.#spinnerAnimation();
     if (!this.argvs._.length) {
       loading.fail("対象となるファイルかフォルダを指定してください。");
       return;
@@ -31,13 +31,7 @@ class ZenHan {
       loading.fail("解析中にエラーが発生しました。");
     }
   }
-
-  #spinnerAnimation() {
-    const spinner = ora("解析中...").start();
-    spinner.color = "yellow";
-    return spinner;
-  }
 }
 
 const zenHan = new ZenHan(argvs);
-zenHan.run();
+await zenHan.run();

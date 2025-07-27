@@ -1,6 +1,6 @@
 {
   "name": "cli-zenhan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./bin/zenHan.js",
   "bin": {
     "zenhan": "./bin/zenHan.js"
@@ -9,6 +9,11 @@
     "fix": "prettier --write . && eslint --fix .",
     "lint": "prettier --check . && eslint ."
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zecky1120/cli-zenHan.git"
+  },
+  "homepage": "https://github.com/zecky1120/cli-zenHan/tree/main?tab=readme-ov-file#cli-zenhan",
   "author": "zecky1120",
   "type": "module",
   "license": "ISC",

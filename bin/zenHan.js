@@ -21,12 +21,12 @@ class ZenHan {
       for (const argv of this.argvs._) {
         await new File(argv).convert();
       }
-      loading.succeed("解析が成功しました。");
+      loading.succeed("全角から半角に変換しました。");
     } catch (error) {
       if (error.code === "ENOENT") {
         console.error("対象のファイル及びディレクトリが存在しませんでした。");
       }
-      loading.fail("解析中にエラーが発生しました。");
+      loading.fail("変換中にエラーが発生しました。");
     }
   }
 }

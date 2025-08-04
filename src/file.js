@@ -8,7 +8,7 @@ export default class File {
     this.file = file;
   }
 
-  async convertMojiInPath() {
+  async convert() {
     const absolutePath = path.resolve(this.file);
     try {
       const stats = fs.statSync(absolutePath);

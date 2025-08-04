@@ -19,7 +19,7 @@ class ZenHan {
     }
     try {
       for (const argv of this.argvs._) {
-        await new File(argv).convertMojiInPath();
+        await new File(argv).convert();
       }
       loading.succeed("解析が成功しました。");
     } catch (error) {

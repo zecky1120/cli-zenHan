@@ -2,7 +2,7 @@
 
 import minimist from "minimist";
 import spinner from "../src/spinner.js";
-import File from "../src/file.js";
+import MojiConversion from "../src/mojiConversion.js";
 
 const argvs = minimist(process.argv.slice(2));
 const loading = spinner();
@@ -19,7 +19,7 @@ class ZenHan {
     }
     try {
       for (const argv of this.argvs._) {
-        await new File(argv).convert();
+        await new MojiConversion(argv).convert();
       }
       loading.succeed("全角から半角に変換しました。");
     } catch (error) {

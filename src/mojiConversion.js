@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import moji from "moji";
 
-export default class File {
+export default class MojiConversion {
   constructor(file) {
     this.file = file;
   }

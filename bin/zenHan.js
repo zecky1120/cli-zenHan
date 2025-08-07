@@ -2,7 +2,7 @@
 
 import minimist from "minimist";
 import spinner from "../src/spinner.js";
-import TextFile from "../src/textFile.js";
+import ConversionFile from "../src/conversionFile.js";
 
 const argvs = minimist(process.argv.slice(2));
 const loading = spinner();
@@ -19,7 +19,7 @@ class ZenHan {
     }
     try {
       for (const argv of this.argvs._) {
-        await new TextFile(argv).convert();
+        await new ConversionFile(argv).convert();
       }
       loading.succeed("全角から半角に変換しました。");
     } catch (error) {

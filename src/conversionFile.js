@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import moji from "moji";
 
-export default class TextFile {
+export default class ConversionFile {
   constructor(file) {
     this.file = file;
   }
@@ -18,7 +18,7 @@ export default class TextFile {
         const dir = fs.readdirSync(absolutePath);
         for (const item of dir) {
           const itemPath = path.join(absolutePath, item);
-          await new File(itemPath).convertMojiInPath();
+          await new ConversionFile(itemPath).convert();
         }
       }
     } catch (error) {

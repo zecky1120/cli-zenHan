@@ -1,11 +1,42 @@
 {
   "name": "cli-zenhan",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.2",
+  "main": "./bin/zenHan.js",
+  "bin": {
+    "zenhan": "./bin/zenHan.js"
   },
-  "author": "",
+  "scripts": {
+    "fix": "prettier --write . && eslint --fix .",
+    "lint": "prettier --check . && eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zecky1120/cli-zenHan.git"
+  },
+  "homepage": "https://github.com/zecky1120/cli-zenHan#readme",
+  "keywords": [
+    "cli",
+    "zenkaku",
+    "hankaku",
+    "moji",
+    "converter",
+    "全角",
+    "半角",
+    "文字変換"
+  ],
+  "author": "zecky1120",
+  "type": "module",
   "license": "ISC",
-  "description": ""
+  "description": "CLI上で全角英数字を半角英数字に一括置換してくれる機能です。",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "moji": "^0.5.1",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2"
+  }
 }
